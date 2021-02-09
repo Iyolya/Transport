@@ -31,4 +31,8 @@ public class Bus {
     public int getCapacity() {
         return this.capacity;
     }
+
+    public void removePassenger(Passenger passenger) {
+        this.passengers.remove(passenger);
+    }
 }
