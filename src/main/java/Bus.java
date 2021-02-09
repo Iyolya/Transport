@@ -2,13 +2,15 @@ import java.util.ArrayList;
 
 public class Bus {
     private String destination;
-    private ArrayList<Passenger> passengers;
     private int capacity;
+    private ArrayList<Passenger> passengers;
 
-    public Bus(String destination, int i) {
+
+    public Bus(String destination, int capacity) {
         this.destination = destination;
-        this.passengers = new ArrayList<Passenger>();
         this.capacity = capacity;
+        this.passengers = new ArrayList<Passenger>();
+
     }
 
 
@@ -21,7 +23,9 @@ public class Bus {
     }
 
     public void addPassenger(Passenger passenger) {
+        if (passengerCount() < getCapacity()){
         this.passengers.add(passenger);
+        }
     }
 
     public int getCapacity() {

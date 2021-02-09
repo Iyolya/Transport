@@ -27,7 +27,9 @@ public class BusTest {
     @Test
     public void cadAddPassenger(){
         bus.addPassenger(passenger);
-        assertEquals(1, bus.passengerCount());
+        bus.addPassenger(passenger);
+        bus.addPassenger(passenger);
+        assertEquals(3, bus.passengerCount());
     }
 
     @Test
